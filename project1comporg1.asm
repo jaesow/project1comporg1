@@ -1,8 +1,15 @@
 
+
 .text
 	main: 
-		li $v1, 11 #system call code tp print characters
-		la $a0, 64 #@ 
+		li $v0, 11 #system call code tp print characters
+		la $a0, 64 #@
+		li $v1, 1 #system call code to print integers
+		#can i add onto $a0 or restart ? 
+		sub $a0, $a0, 16 #0
+		syscall
+		add $a0, $a0, 2 #2
+		syscall
 		sub $a0, $a0, 53 #(11 =  vertical tab or maybe i should use 9 = new line feed)
 		syscall  
  		addi $a0, $a0, 72 #S (83)
