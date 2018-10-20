@@ -10,6 +10,12 @@
 		syscall
 		add $a0, $a0, 2 #2
 		syscall
+		add $a0, $a0, 6 #8 (56)
+		syscall
+		sub $a0, $a0, 2 #6 54
+		syscall
+		sub $a0, $a0, 1 #5 53
+		syscall
 		sub $a0, $a0, 53 #(11 =  vertical tab or maybe i should use 9 = new line feed)
 		syscall  
  		addi $a0, $a0, 72 #S (83)
