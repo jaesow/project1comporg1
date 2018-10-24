@@ -21,6 +21,8 @@
 		sub $a0, $a0, 2 #2 50
 		syscall
 		addi $a0, $a0, 2 #4 52
+		syscall
+		addi $v0, $v0 10 
 		syscall 
 		sub $a0, $a0, 42 #(10 = new line feed)
 		syscall 
