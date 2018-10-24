@@ -4,6 +4,7 @@
 	main: 
 		li $v0, 11 #system call code to print characters
 		la $a0, 64 #@
+		syscall
 		li $v1, 1 #system call code to print integers
 		#can i add onto $a0 or restart ? 
 		sub $a0, $a0, 16 #0
@@ -24,7 +25,8 @@
 		syscall 
 		sub $a0, $a0, 42 #(10 = new line feed)
 		syscall  
-		li $v0, 11 #system call code to print characters 
+		li $v0, 11 #system call code to print characters
+		syscall 
  		addi $a0, $a0, 72 #S (83)
 		syscall
 		addi $a0, $a0, 28 #o (111)
