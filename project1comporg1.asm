@@ -24,7 +24,7 @@
 		syscall 
 		sub $a0, $a0, 42 #(10 = new line feed)
 		syscall 
- 		la, $a0, 73 #S (83)
+ 		la $a0, 73 #S (83)
 		syscall
 		addi $a0, $a0, 28 #o (111)
 		syscall
@@ -46,4 +46,3 @@
 		syscall
 		sub $a0, $a0 1 #a (97)
 		syscall
-		#li $v0, 10 #system call code for exit 
