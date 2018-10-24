@@ -24,7 +24,7 @@
 		syscall 
 		sub $a0, $a0, 42 #(10 = new line feed)
 		syscall 
- 		la $a0, 73 #S (83)
+ 		la $a0, 83 #S
 		syscall
 		addi $a0, $a0, 28 #o (111)
 		syscall
