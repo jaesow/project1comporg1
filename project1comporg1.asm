@@ -2,7 +2,7 @@
 
 .text
 	main: 
-		li $v0, 11 #system call code tp print characters
+		li $v0, 11 #system call code to print characters
 		la $a0, 64 #@
 		li $v1, 1 #system call code to print integers
 		#can i add onto $a0 or restart ? 
@@ -22,8 +22,9 @@
 		syscall
 		addi $a0, $a0, 2 #4 52
 		syscall 
-		sub $a0, $a0, 53 #(11 =  vertical tab or maybe i should use 9 = new line feed)
+		sub $a0, $a0, 42 #(10 = new line feed)
 		syscall  
+		li $v0, 11 #system call code to print characters 
  		addi $a0, $a0, 72 #S (83)
 		syscall
 		addi $a0, $a0, 28 #o (111)
