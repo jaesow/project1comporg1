@@ -4,12 +4,11 @@
 	main: 
 		li $v0, 11 #system call code to print characters
 		la $a0, 64 #@
+		syscall 
+		sub $v0, $v0, 10 #print integers 
+		sub $a0, $a0, 64 #0
 		syscall
-		li $v1, 1 #system call code to print integers
-		#can i add onto $a0 or restart ? 
-		sub $a0, $a0, 16 #0
-		syscall
-		add $a0, $a0, 2 #2
+		addi $a0, $a0, 2 #2
 		syscall
 		add $a0, $a0, 6 #8 (56)
 		syscall
@@ -24,10 +23,8 @@
 		addi $a0, $a0, 2 #4 52
 		syscall 
 		sub $a0, $a0, 42 #(10 = new line feed)
-		syscall  
-		li $v0, 11 #system call code to print characters
 		syscall 
- 		addi $a0, $a0, 73 #S (83)
+ 		la, $a0, 73 #S (83)
 		syscall
 		addi $a0, $a0, 28 #o (111)
 		syscall
@@ -35,7 +32,9 @@
 		syscall
 		sub $a0, $a0, 75 #, (44)
 		syscall
-		addi $a0,$a0,30 #J (74)
+		sub $a0, $a0, 43 # space (32)
+		syscall
+		addi $a0, $a0, 42 #J (74)
 		syscall
 		addi $a0, $a0, 27 #e (101)
 		syscall
@@ -43,9 +42,8 @@
 		syscall
 		sub $a0, $a0, 13 #a (97)
 		syscall
-		addi $a0,$a0, 1 #b (98)
+		addi $a0, $a0, 1 #b (98)
 		syscall
 		sub $a0, $a0 1 #a (97)
 		syscall
-		li $v0, 10 #system call code for exit
-		syscall 
+		#li $v0, 10 #system call code for exit 
