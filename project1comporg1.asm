@@ -33,6 +33,8 @@
 		syscall
 		addi $a0, $a0, 8 #w (119)
 		syscall
+		sub $a0, $a0, 75 #, (44)
+		syscall
 		sub $a0,$a0,45 #J (74) 119 - 45 = 74
 		syscall
 		addi $a0, $a0, 27 #e (101)
