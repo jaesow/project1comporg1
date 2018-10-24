@@ -46,5 +46,6 @@
 		addi $a0,$a0, 1 #b (98)
 		syscall
 		sub $a0, $a0 1 #a (97)
+		syscall
 		li $v0, 10 #system call code for exit
 		syscall 
