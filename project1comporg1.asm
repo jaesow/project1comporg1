@@ -10,7 +10,7 @@
 		syscall
 		addi $a0, $a0, 2 #2
 		syscall
-		add $a0, $a0, 6 #8 (56)
+		addi $a0, $a0, 6 #8 (56)
 		syscall
 		sub $a0, $a0, 2 #6 54
 		syscall
