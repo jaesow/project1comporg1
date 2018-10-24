@@ -35,7 +35,7 @@
 		syscall
 		sub $a0, $a0, 75 #, (44)
 		syscall
-		sub $a0,$a0,45 #J (74) 119 - 45 = 74
+		addi $a0,$a0,30 #J (74)
 		syscall
 		addi $a0, $a0, 27 #e (101)
 		syscall
