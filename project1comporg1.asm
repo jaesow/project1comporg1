@@ -27,7 +27,7 @@
 		syscall  
 		li $v0, 11 #system call code to print characters
 		syscall 
- 		addi $a0, $a0, 72 #S (83)
+ 		addi $a0, $a0, 73 #S (83)
 		syscall
 		addi $a0, $a0, 28 #o (111)
 		syscall
